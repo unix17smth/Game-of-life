@@ -82,26 +82,7 @@ couple * add_couple(couple *head, int value1, int value2)
 
 
 
-// cette fonction montre la liste chainee (ce n'est pas utile au programme ...)
-void display_list(couple *head)
-{
 
-    if (head==NULL)
-    {
-        printf("nothing to show \n");
-    }
-    else
-    {
-
-    while (head != NULL)
-    {
-        printf("%d ",head->i);
-        printf("%d\n",head->j);
-        head=head->next;
-    }
-    }
-
-}
 
 
 // cette fonction detruit la liste .. free les elements
@@ -205,7 +186,7 @@ couple * detecter_les_vivants(int ** M,int N)
 {
     couple *head=NULL;
 
-    int i=0,j=0,k=0;
+    int i=0,j=0;
 
     for (i=0;i<N;i++)
     {
@@ -218,7 +199,7 @@ couple * detecter_les_vivants(int ** M,int N)
               //cellule vivante dont le nombre des voisins est 2 ou 3
                 if ((nbr_voisins(M,i,j,N)==3)||(nbr_voisins(M,i,j,N)==2)) //
                 {
-                    if (k==0)
+                   
                     {
                         head=add_couple(head,i, j);
 
