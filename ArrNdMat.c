@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include "ArrNdMat.h"
-hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+
 
 // cette fonction cree une matrice de taille N
 int ** create_matrix(int N)
