@@ -192,31 +192,11 @@ couple * detecter_les_vivants(int ** M,int N)
     {
         for (j=0;j<N;j++)
         {
-            // les deux regles
-
-            if (M[i][j]==1) // cellule vivante
-            {
-              //cellule vivante dont le nombre des voisins est 2 ou 3
-                if ((nbr_voisins(M,i,j,N)==3)||(nbr_voisins(M,i,j,N)==2)) //
-                {
-                   
-                    {
-                        head=add_couple(head,i, j);
-
-                    }
-
-                }
-
-            }
-            else // cellule morte
-            // cellule morte ayant 3 voisins vivant
-
+            if ((M[i][j]==1)&&(nbr_voisins(M,i,j,N)==3)||(nbr_voisins(M,i,j,N)==2)) 
+                head=add_couple(head,i, j);
+            else
                 if (nbr_voisins(M,i,j,N)==3)
-                {
                     head=add_couple(head,i, j);
-                }
-
-
         }
     }
     return head ;
