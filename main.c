@@ -18,11 +18,21 @@ int main()
 
     printf("entrer le nombre de cellules vivantes ");
     scanf("%d",&nombre);
-    printf ("enter chaque x et y d'une coords dans une ligne et separer par un espace  \n");
-
+    printf("entrer le nombre de cellules vivantes ");
+    scanf("%d",&nombre);
+    
     for (i=0;i<nombre;i++)
+    {   do
     {
-        scanf("%d%d",&x,&y);
+        printf("entrez le coord x de la cellules %d \n",i );
+        scanf("%d",&x);
+    } while (x<N&&x>=0);
+         do
+    {
+        printf("entrez le coord y de la cellules %d \n",i );
+        scanf("%d",&y);
+    } while (y<N&&y>=0);
+
         M[x][y]=1;
     }
 
